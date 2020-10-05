@@ -13,6 +13,11 @@ exploitability: 2
 prevalence: 3
 detectability: 1
 technical: 2
+redirect_from:
+  - OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%2526Monitoring.html
+  - OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%2526Monitoring
+  - OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%252526Monitoring.html
+  - OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%252526Monitoring
 
 ---
 
@@ -39,7 +44,7 @@ Insufficient logging, detection, monitoring and active response occurs any time:
 * Penetration testing and scans by [DAST](/www-community/Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](/www-project-zap)) do not trigger alerts.<br>
 * The application is unable to detect, escalate, or alert for active attacks in real time or near real time.<br>
 
-You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see [A3:2017-Sensitive Data Exposure](Top_10-2017_A3-Sensitive_Data_Exposure)).
+You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see [A3:2017-Sensitive Data Exposure](A3_2017-Sensitive_Data_Exposure)).
 
 {%- include t10_subsection.html token="howToPrevent" pos="right" -%}
 As per the risk of the data stored or processed by the application:<br>
@@ -49,7 +54,7 @@ As per the risk of the data stored or processed by the application:<br>
 * Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.<br>
 * Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.<br>
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](/www-project-appsensor), web application firewalls such as ModSecurity with the [OWASP ModSecurity Core Rule Set](/www-project-modsecurity-core-rule-set), and log correlation software with custom dashboards and alerting.
+There are commercial and open source application protection frameworks such as [OWASP AppSensor](/www-project-appsensor) ([old wiki](https://wiki.owasp.org/index.php/OWASP_AppSensor_Project)), web application firewalls such as ModSecurity with the [OWASP ModSecurity Core Rule Set](/www-project-modsecurity-core-rule-set), and log correlation software with custom dashboards and alerting.
 
 {%- include t10_subsection.html token="exampleAttackScenarios" pos="left" -%}
 **Scenario #1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.<br>
@@ -60,12 +65,12 @@ There are commercial and open source application protection frameworks such as [
 
 {%- include t10_subsection.html token="references" pos="right" -%}
 **OWASP**<br>
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](/www-project-proactive-controls)<br>
+* [OWASP Proactive Controls: Implement Logging and Monitoring](/www-project-proactive-controls/v3/en/c9-security-logging.html)<br>
 * [OWASP Application Security Verification Standard: V8 Logging and Monitoring](/www-project-application-security-verification-standard)<br>
-* [OWASP Testing Guide: Testing for Detailed Error Code](/www-project-testing)<br>
+* [OWASP Testing Guide: Testing for Detailed Error Code](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)<br>
 * [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)<br>
 <br>
 **External**<br>
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)<br>
-* [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/223.html)
+* [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
 {% include t10_subsection_end.html %}

@@ -13,6 +13,9 @@ exploitability: 1
 prevalence: 2
 detectability: 2
 technical: 3
+redirect_from:
+  - OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization.html
+  - OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization
 
 ---
 
@@ -65,13 +68,13 @@ An attacker changes the serialized object to give themselves admin privileges:<b
 {%- include t10_subsection.html token="references" pos="right" -%}
 **OWASP**<br>
 * [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)<br>
-* [OWASP Proactive Controls: Validate All Inputs](/www-project-proactive-controls)<br>
+* [OWASP Proactive Controls: Validate All Inputs](/www-project-proactive-controls/v3/en/c5-validate-inputs)<br>
 * [OWASP Application Security Verification Standard](/www-project-application-security-verification-standard)<br>
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)<br>
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)<br>
 <br>
 **External**<br>
-* [CWE-502: eserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)<br>
+* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)<br>
 * [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)<br>
 * [OWASP AppSec Cali 2015: Marshalling Pickles](http://frohoff.github.io/appseccali-marshalling-pickles/)
 {% include t10_subsection_end.html %}

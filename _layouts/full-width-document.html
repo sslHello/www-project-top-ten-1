@@ -41,7 +41,7 @@
 {%- endfor -%}
 
     <div id="main" class="page-body tab" role="tabpanel" aria-labelledby="main-link" tabindex="0">
-        <div class="doc-title">{{ page.document }}&nbsp;&nbsp;&nbsp;{%- include github-buttons.html -%}</div>
+        <div class="doc-title">{{ page.document }}</div>
         <h1 class="page-title">{{ page.title }}</h1>
 
     <nav role="navigation" aria-label="navigate page">
@@ -53,12 +53,6 @@
                 <a href="{{ href }}"><span style="font-size:120%;">&#8592;&#160;</span>{{ previous.title }}</a>
             {%- endif -%}
             </td>
-            {%- comment -%} --------------------------------------
-            <td style="width: 33%; text-align: center; border: 0;">
-            <center><a href="{{site.baseurl}}{%- include i18n.html token='baseURL' -%}" title="{%- include i18n.html token='tableOfContents' -%}"> {%- include i18n.html token='tableOfContents' -%} </a><br>
-                 <p><a href="{%- include i18n.html token='pdfDocument' -%}" title="{{page.document}} ({{page.lang}}).pdf"> PDF version</a></p>
-            </center></td>
-            ---------------------------------- {%- endcomment -%}
             {%- include nav_top_center_link.html -%}
             <td style="width: 33%; text-align:right; border: 0;">
             {%- if next -%}
@@ -82,12 +76,6 @@
                 <a href="{{ href }}"><span style="font-size:120%;">&#8592;&#160;</span>{{ previous.title }}</a>
             {%- endif -%}
             </td>
-            {%- comment -%} --------------------------------------
-            <td style="width: 33%; text-align: center; border: 0;">
-            <center><a href="{{site.github.url}}" title="{{site.project.name}}"> {{site.project.name}} </a><br>
-                 <p><a href="{%- include i18n.html token='pdfDocument' -%}" title="{{page.document}} ({{page.lang}}).pdf"> PDF version</a></p>
-            </center></td>
-            ---------------------------------- {%- endcomment -%}
             {%- include nav_bottom_center_link.html -%}
             <td style="width: 33%; text-align:right; border: 0;">
             {%- if next -%}

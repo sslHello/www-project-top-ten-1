@@ -9,6 +9,11 @@ layout: full-width-document
 author:
 contributors:
 tags: OWASP Top Ten 2017, Top Ten
+redirect_from:
+  - OWASP_Top_Ten_2017/Top_10-2017_What%2527s_Next_for_Application_Managers.html
+  - OWASP_Top_Ten_2017/Top_10-2017_What%2527s_Next_for_Application_Managers
+  - OWASP_Top_Ten_2017/Top_10-2017_What%252527s_Next_for_Application_Managers.html
+  - OWASP_Top_Ten_2017/Top_10-2017_What%252527s_Next_for_Application_Managers
 
 ---
 {%- include t10_subsection_begin.html -%}
@@ -59,7 +64,7 @@ Applications belong to the most complex systems humans regularly create and main
 {% include t10_subsection_inner_round_box.html
    topic='**Retiring Systems:**' 
    description="
-       * Any required data should be archived. All other data should be securely wiped.<b r>
+       * Any required data should be archived. All other data should be securely wiped.<br>
        * Securely retire the application, including deleting unused accounts and roles and permissions.<br>
        * Set your application's state to retired in the CMDB."
 %}

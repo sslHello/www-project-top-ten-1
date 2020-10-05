@@ -9,6 +9,9 @@ layout: full-width-document
 author:
 contributors:
 tags: OWASP Top Ten 2017, Top Ten
+redirect_from:
+  - OWASP_Top_Ten_2017/Top_10-2017_Application_Security_Risks.html
+  - OWASP_Top_Ten_2017/Top_10-2017_Application_Security_Risks
 
 ---
 
@@ -22,7 +25,7 @@ Attackers can potentially use many different paths through your application to d
 Sometimes these paths are trivial to find and exploit, and sometimes they are extremely difficult. Similarly, the harm that is caused may be of no consequence, or it may put you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization. Together, these factors determine your overall risk.
 
 {%- include t10_subsection.html text="What is My Risk?" pos="left" width='70%' -%}
-The [OWASP Top 10](https://owasp.org/www-project-top-ten) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the [OWASP Risk Rating Methodology](https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology).<br>
+The [OWASP Top 10](https://owasp.org/www-project-top-ten) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the [OWASP Risk Rating Methodology](/www-community/OWASP_Risk_Rating_Methodology).<br>
 <br>
 {% include risk_factor_names_table.html %}
 <br>
@@ -34,7 +37,7 @@ Where possible, the names of the risks in the Top 10 are aligned with [Common We
 
 {%- include t10_subsection.html text="References" pos="right" -%}
 **OWASP**<br>
-* [OWASP Risk Rating Methodology (old wiki)](https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology)<br>
+* [OWASP Risk Rating Methodology](/www-community/OWASP_Risk_Rating_Methodology)<br>
 * [Article on Threat/Risk Modeling (old wiki)](https://wiki.owasp.org/index.php/Application_Threat_Modeling)<br>
 <br>
 **External**<br>
@@ -43,5 +46,5 @@ Where possible, the names of the risks in the Top 10 are aligned with [Common We
 * [NIST Cyber Framework (US)](https://www.nist.gov/cyberframework)<br>
 * [ASD Strategic Mitigations (AU)](https://www.asd.gov.au/infosec/mitigationstrategies.htm)<br>
 * [NIST CVSS 3.0](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)<br>
-* [Microsoft Threat Modelling Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49168)<br>
+* [Microsoft Threat Modelling Tool](https://aka.ms/tmt)<br>
 {% include t10_subsection_end.html %}

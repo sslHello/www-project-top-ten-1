@@ -13,6 +13,9 @@ exploitability: 2
 prevalence: 3
 detectability: 2
 technical: 3
+redirect_from:
+  - OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure.html
+  - OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure
 
 ---
 
@@ -20,7 +23,7 @@ technical: 3
 {%- include risk_description.html pos="firstLeft" -%}
 Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs). 
 {%- include risk_description.html pos="mid" -%}
-Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest.
+Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server-side weaknesses are mainly easy to detect, but hard for data at rest.
 {%- include risk_description.html pos="right" -%}
 Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws. 
 {%- include risk_end.html -%}
@@ -49,7 +52,7 @@ Do the following, at a minimum, and consult the references:<br>
 * Verify independently the effectiveness of configuration and settings.
 
 {%- include t10_subsection.html token="exampleAttackScenarios" pos="left" -%}
-**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text.<br>
+**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing a SQL injection flaw to retrieve credit card numbers in clear text.<br>
 
 **Scenario #2**: A site doesn't use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic (e.g. at an insecure wireless network), downgrades connections from HTTPS to HTTP, intercepts requests, and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above they could alter all transported data, e.g. the recipient of a money transfer.<br>
 
@@ -57,16 +60,16 @@ Do the following, at a minimum, and consult the references:<br>
 
 {%- include t10_subsection.html token="references" pos="right" -%}
 **OWASP**<br>
-* [OWASP Proactive Controls: Protect Data](/www-project-proactive-controls)<br>
+* [OWASP Proactive Controls: Protect Data Everywhere](/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)<br>
 * [OWASP Application Security Verification Standard (V7, 9, 10)](/www-project-application-security-verification-standard)<br>
 * [OWASP Cheat Sheet: Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)<br>
 * [OWASP Cheat Sheet: User Privacy Protection](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)<br>
 * [OWASP Cheat Sheet: Password and Cryptographic Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)<br>
 * [OWASP Cheat Sheet: HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)<br>
-* [OWASP Testing Guide: Testing for weak cryptography](/www-project-testing)<br>
+* [OWASP Testing Guide: Testing for weak cryptography](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)<br>
 <br>
 **External**<br>
-* [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)<br>
+* [CWE-202: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/202.html)<br>
 * [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html)<br>
 * [CWE-311: Missing Encryption](https://cwe.mitre.org/data/definitions/311.html)<br>
 * [CWE-312: Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)<br>
