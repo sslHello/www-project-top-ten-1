@@ -15,21 +15,6 @@ redirect_from:
 
 ---
 
-Test grid
-<br>
-
-<div class="wrapper">
-  <div class="box a">A</div>
-  <div class="box b">B</div>
-  <div class="box c">C</div>
-  <div class="box d">
-    <div class="box e">E</div>
-    <div class="box f">F</div>
-    <div class="box g">G</div>
-  </div>
-</div>
-<br>
-
 {%- include t10_subsection_begin.html -%}
 {%- include t10_subsection.html text="Foreword" pos="firstWhole" -%}
 Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes the most common risks essential to discover and resolve quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.
