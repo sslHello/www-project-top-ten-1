@@ -21,17 +21,6 @@ redirect_from:
 
 {% include risk_small.html %}
 
-{% include risk_begin.html %}
-{%- include risk_description.html pos="firstLeft" -%}
-Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. Injection flaws occur when an attacker can send hostile data to an interpreter.
-{%- include risk_description.html pos="mid" -%}
-Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries.<br>
-Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws.
-{%- include risk_description.html pos="right" -%}
-Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover.<br>
-The business impact depends on the needs of the application and data.
-{%- include risk_end.html -%}
-
 {%- include t10_subsection_begin.html -%}
 {%- include t10_subsection.html token="isTheApplicationVulnerable" pos="firstLeft" -%}
 An application is vulnerable to attack when:<br>
@@ -54,8 +43,7 @@ In both cases, the attacker modifies the ‘id’ parameter value in their brows
 <br>
 This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.
 
-#{%- include t10_subsection.html token="howToPrevent" pos="right" -%}
-#{%- include t10_subsection.html token="howToPrevent" pos="left" -%}
+{%- include t10_subsection.html token="howToPrevent" pos="left" -%}
 Preventing injection requires keeping data separate from commands and queries.<br>
 * The preferred option is to use a safe API, which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use Object Relational Mapping Tools (ORMs).<br>
 **Note**: Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().<br>
@@ -64,7 +52,6 @@ Preventing injection requires keeping data separate from commands and queries.<b
 **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.<br>
 * Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
 
-#{%- include t10_subsection.html token="references" pos="right" -%}
 {%- include t10_subsection.html token="references" pos="left" -%}
 **OWASP**<br>
 * [OWASP Proactive Controls: Secure Database Access](/www-project-proactive-controls/v3/en/c3-secure-database)<br>
