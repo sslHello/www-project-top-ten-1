@@ -31,12 +31,9 @@
  {%- else -%} {%- include i18n.html token='applicationSpecific' -%}
 {%- endcase -%}
 </td>
-<td>
 {% include risk_factors_color.html likelihood=page.exploitability %}
 {%- include i18n.html token='exploitability' -%}: {{page.exploitability}} </td>
-
-{%- include risk_description.html pos="left" -%}
-Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. Injection flaws occur when an attacker can send hostile data to an interpreter.
+{%- include risk_description.html pos="FirstLeft" -%} Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. Injection flaws occur when an attacker can send hostile data to an interpreter.
 </tr>
 <tr>  
 <td width="100%" colspan="2" style="border: 3px solid #444444;"> {%- include i18n.html token='securityWeakness' -%}</td>
@@ -46,9 +43,7 @@ Almost any source of data can be an injection vector, environment variables, par
 {%- include i18n.html token='prevalence' -%}: {{page.prevalence}} </td>
 {% include risk_factors_color.html likelihood=page.detectability %}
 {%- include i18n.html token='detectability' -%}: {{page.detectability}} </td>
-
-{%- include risk_description.html pos="left" -%}
-Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries.<br>
+{%- include risk_description.html pos="FirstLeft" -%} Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries.<br>
 Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws.
 </tr>
 <tr>
@@ -68,8 +63,6 @@ Injection flaws are easy to discover when examining code. Scanners and fuzzers c
  {%- when 2017 -%} {%- include i18n.html token='businessQuestionmark' -%}
  {%- else -%} {%- include i18n.html token='applicationBusinessSpecific' -%}
 {%- endcase -%} </td>
-
-{%- include risk_description.html pos="left" -%}
-Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover.<br>
+{%- include risk_description.html pos="FirstLeft" -%} Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover.<br>
 The business impact depends on the needs of the application and data.
 {%- include risk_end.html -%}
